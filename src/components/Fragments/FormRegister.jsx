@@ -8,25 +8,25 @@ const FormRegister = ()=>{
             children="Full Name" 
             type="text" 
             placeholder="John Doe" 
-            name="fulname"
+            id="fulname"
           />
           <InputForm 
             children="Email" 
             type="email" 
             placeholder="johndoe@gmail.com" 
-            name="email"
+            id="email"
           />
           <InputForm 
             children="Password" 
             type="password" 
             placeholder="Password must be over 8 characters" 
-            name="password"
+            id="password"
           />
           <InputForm 
             children="Confirm Password" 
             type="password" 
             placeholder="Password must be over 8 characters" 
-            name="password"
+            id="password"
           />
           <Buttons variant="bg-cyan-500">Register</Buttons>
         </form>

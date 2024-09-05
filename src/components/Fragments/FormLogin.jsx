@@ -8,13 +8,13 @@ const FormLogin = ()=>{
             children="Email" 
             type="email" 
             placeholder="example@gmail.com" 
-            name="email"
+            id="email"
           />
           <InputForm 
             children="Password" 
             type="password" 
-            placeholder="akucintakamuE" 
-            name="password"
+            placeholder="********" 
+            id="password"
           />
           <Buttons variant="bg-cyan-500">Login</Buttons>
         </form>

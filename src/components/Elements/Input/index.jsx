@@ -2,11 +2,11 @@ import Labels from "./label"
 import Inputs from "./Input"
 
 const InputForm = (props)=>{
-    const {children, type, placeholder, name} = props
+    const {children, type, placeholder, id} = props
     return (
         <div className="mb-6">
-            <Labels htmlfor={name}>{children}</Labels>
-            <Inputs type={type} placeholder={placeholder} name={name}/>
+            <Labels htmlfor={id}>{children}</Labels>
+            <Inputs type={type} placeholder={placeholder} id={id}/>
         </div>
     )
 }
