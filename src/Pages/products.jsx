@@ -1,3 +1,4 @@
+import { Fragment } from "react"
 import Buttons from "../components/Elements/Buttons"
 import CardProduct from "../components/Fragments/CardProduct"
 
@@ -21,17 +22,26 @@ const products = [
     }
 ]
 
+const email = localStorage.getItem("email")
 const ProductPage = ()=>{
+    const handleLogout = ()=>{
+        window.location.href="/login"
+        localStorage.removeItem("email")
+        localStorage.removeItem("password")
+    }
     return (
-        <div className="flex justify-center">
-            {products.map((product)=>(
-                <CardProduct key = {product.id}>
-                    <CardProduct.Header image={product.image}></CardProduct.Header>
-                    <CardProduct.Body title={product.title}>{product.description}</CardProduct.Body>
-                    <CardProduct.Footer price={product.price}></CardProduct.Footer>
-                </CardProduct>
-            ))}
-        </div>
+        <Fragment>
+            <div className="flex justify-end h-20 bg-teal-400 text-white items-center px-10"><div className="mx-5">{email}</div><Buttons variant="bg-purple-300" width="w-max" onClick={handleLogout}>Log Out</Buttons></div>
+            <div className="flex justify-center">
+                {products.map((product)=>(
+                    <CardProduct key = {product.id}>
+                        <CardProduct.Header image={product.image}></CardProduct.Header>
+                        <CardProduct.Body title={product.title}>{product.description}</CardProduct.Body>
+                        <CardProduct.Footer price={product.price}></CardProduct.Footer>
+                    </CardProduct>
+                ))}
+            </div>
+        </Fragment>
     )
 }
 
