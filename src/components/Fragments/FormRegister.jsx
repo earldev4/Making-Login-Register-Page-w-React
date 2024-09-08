@@ -28,7 +28,7 @@ const FormRegister = ()=>{
             placeholder="Password must be over 8 characters" 
             id="password"
           />
-          <Buttons variant="bg-cyan-500">Register</Buttons>
+          <Buttons variant="bg-cyan-500" width="w-full">Register</Buttons>
         </form>
     )
 }

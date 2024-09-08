@@ -16,7 +16,7 @@ const FormLogin = ()=>{
             placeholder="********" 
             id="password"
           />
-          <Buttons variant="bg-cyan-500">Login</Buttons>
+          <Buttons variant="bg-cyan-500" width="w-full">Login</Buttons>
         </form>
     )
 }
